@@ -267,8 +267,11 @@ L.Handler.PathDrag = L.Handler.extend(
 
       // consistency
       if (moved) {
+        var startLatLng = L.containerPointToLatLng(this._dragStartPoint);
+        var endLatLng = L.containerPointToLatLng(containerPoint);
         this._path.fire('dragend', {
           distance: distance(this._dragStartPoint, containerPoint),
+          latLngTranslation: [endLatLng.lng - startLatLng.lng, endLatLng.lat - startLatLng.lat],
         });
 
         // hack for skipping the click in canvas-rendered layers
