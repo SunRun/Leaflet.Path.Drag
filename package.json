@@ -1,6 +1,6 @@
 {
   "name": "@sunrun/leaflet-path-drag",
-  "version": "1.8.0-beta.3-patch.5",
+  "version": "1.8.0-beta.3-patch.6",
   "description": "Drag functionality for Leaflet vector layers, patched by Sunrun for MultiPolygon support",
   "main": "index.js",
   "files": [

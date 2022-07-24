@@ -267,8 +267,8 @@ L.Handler.PathDrag = L.Handler.extend(
 
       // consistency
       if (moved) {
-        var startLatLng = L.containerPointToLatLng(this._dragStartPoint);
-        var endLatLng = L.containerPointToLatLng(containerPoint);
+        var startLatLng = this._path._map.containerPointToLatLng(this._dragStartPoint);
+        var endLatLng = this._path._map.containerPointToLatLng(containerPoint);
         this._path.fire('dragend', {
           distance: distance(this._dragStartPoint, containerPoint),
           latLngTranslation: [endLatLng.lng - startLatLng.lng, endLatLng.lat - startLatLng.lat],
